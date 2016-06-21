@@ -1,0 +1,2006 @@
+<div id="awardsSetting" class="settingBox hide" style="padding-top: 20px; display: none;">
+
+	<div id="awardBox" class="awardBox relative">
+		<div class="awardNums menuBox noBotBorder">
+
+			<span class="topAwardExplain">请设置活动需要派发的奖项（每人最多只可中奖一次）</span>
+
+			<div style="float:right;line-height: 23px;">
+				<input type="checkbox" id="comfortSetting" style="margin-right: 5px;">
+				<label for="comfortSetting">设置安慰奖</label>
+			</div>
+		</div>
+		<div class="menuBox awardLevelBox">
+			<div class="awardLevelItem norLevelItem checked">奖项一</div>
+			<div class="awardLevelItem norLevelItem">奖项二</div>
+			<div class="awardLevelItem norLevelItem">奖项三</div>
+			<div class="awardLevelItem norLevelItem hide">奖项四</div>
+			<div class="awardLevelItem norLevelItem hide">奖项五</div>
+			<div class="awardLevelItem norLevelItem hide">奖项六</div>
+			<div class="awardLevelItem norLevelItem hide">奖项七</div>
+			<div class="awardLevelItem norLevelItem hide">奖项八</div>
+			<div class="awardLevelItem hide anwei">安慰奖</div>
+
+			<div class="right">
+				<div id="delAwardNum" style="" class="awardNumOpt pointer delAwardNum">-</div>
+				<div id="addAwardNum" style="" class="awardNumOpt pointer addAwardNum">+</div>
+				<div id="addAwardDetail" class="addAwardDetail hide relative" style="display: none;">
+					<div id="copyAward" class="addLine pointer">复制奖项</div>
+					<div id="newAward" class="addLine pointer">新增奖项</div>
+					<div class="sanjiao"></div>
+				</div>
+			</div>
+
+		</div>
+		<div class="menuBox" style="padding: 10px 0px 0;">
+			<div id="awardDetail" class="awardDetail scrollBox transitionPanel" style="height:480px">
+
+				<div class="awardSettingBox  ">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="一等奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值100元礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="baseLine3 amounLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品数量：</div>
+						<input class="awardAmount input onlyNum input7" maxlength="5" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" name="" value="0"></div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline0" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType0">
+						<label for="cashUnderline0">线下兑奖</label>
+						<input id="cashOnline0" class="cashOnline wxCardInput" type="radio" name="cashType0">
+						<label for="cashOnline0">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash0" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash0">
+										<label for="onlineWxCash0">微信公众号</label>
+										<input id="onlinePaCash0" class="onlinePage wxCardInput" type="radio" name="onlineCash0">
+										<label for="onlinePaCash0">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash0" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn0" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn0" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402215">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402224">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine setWxCardBox">
+						<span class="powerIcon ver_biz flag"></span>
+						<span class="flag"></span>
+						<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+						<input id="generateWxCard0" class="generateWxCard" type="radio" name="setWxCard0" disabled="">
+						<label for="generateWxCard0">同时生成微信优惠券</label>
+						<input id="closeWxCard0" class="closeWxCard" checked="" type="radio" name="setWxCard0">
+						<label for="closeWxCard0">不需要微信优惠券</label>
+
+						<div class="tipsColor" style="margin-left: 113px;">
+							请先到个人中心开通微信卡券功能
+							<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+						</div>
+
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode0" class="sysAwardCode" checked="" type="radio" name="setCusCode0">
+							<label for="sysAwardCode0">系统生成</label>
+							<input id="cusAwardCode0" class="cusAwardCode" type="radio" name="setCusCode0" disabled="">
+							<label for="cusAwardCode0">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<textarea class="cusCodeBox awardTextArea marginLeft112"></textarea>
+								<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+								<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+							</div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink0" class="closeAwardLink" checked="" type="radio" name="cusAwardLink0">
+							<label for="closeAwardLink0">关闭</label>
+							<input id="openAwardLink0" class="openAwardLink" type="radio" name="cusAwardLink0" disabled="">
+							<label for="openAwardLink0">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn0" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn0">
+							<label for="closeAwardBtn0">关闭</label>
+							<input id="openAwardBtn0" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn0">
+							<label for="openAwardBtn0">页面跳转</label>
+							<input id="newAttention0" type="radio" name="cusAwardBtn0" class="newAttention wxCardInput">
+							<label for="newAttention0">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox0" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn0" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn0" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="awardSettingBox hide ">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="二等奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值50元礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="baseLine3 amounLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品数量：</div>
+						<input class="awardAmount input onlyNum input7" maxlength="5" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" name="" value="0"></div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline1" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType1">
+						<label for="cashUnderline1">线下兑奖</label>
+						<input id="cashOnline1" class="cashOnline wxCardInput" type="radio" name="cashType1">
+						<label for="cashOnline1">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash1" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash1">
+										<label for="onlineWxCash1">微信公众号</label>
+										<input id="onlinePaCash1" class="onlinePage wxCardInput" type="radio" name="onlineCash1">
+										<label for="onlinePaCash1">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash1" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn1" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn1" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402216">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402225">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine setWxCardBox">
+						<span class="powerIcon ver_biz flag"></span>
+						<span class="flag"></span>
+						<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+						<input id="generateWxCard1" class="generateWxCard" type="radio" name="setWxCard1" disabled="">
+						<label for="generateWxCard1">同时生成微信优惠券</label>
+						<input id="closeWxCard1" class="closeWxCard" checked="" type="radio" name="setWxCard1">
+						<label for="closeWxCard1">不需要微信优惠券</label>
+
+						<div class="tipsColor" style="margin-left: 113px;">
+							请先到个人中心开通微信卡券功能
+							<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+						</div>
+
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode1" class="sysAwardCode" checked="" type="radio" name="setCusCode1">
+							<label for="sysAwardCode1">系统生成</label>
+							<input id="cusAwardCode1" class="cusAwardCode" type="radio" name="setCusCode1" disabled="">
+							<label for="cusAwardCode1">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<textarea class="cusCodeBox awardTextArea marginLeft112"></textarea>
+								<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+								<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+							</div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink1" class="closeAwardLink" checked="" type="radio" name="cusAwardLink1">
+							<label for="closeAwardLink1">关闭</label>
+							<input id="openAwardLink1" class="openAwardLink" type="radio" name="cusAwardLink1" disabled="">
+							<label for="openAwardLink1">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn1" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn1">
+							<label for="closeAwardBtn1">关闭</label>
+							<input id="openAwardBtn1" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn1">
+							<label for="openAwardBtn1">页面跳转</label>
+							<input id="newAttention1" type="radio" name="cusAwardBtn1" class="newAttention wxCardInput">
+							<label for="newAttention1">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox1" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn1" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn1" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="awardSettingBox hide ">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="三等奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值10元礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="baseLine3 amounLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品数量：</div>
+						<input class="awardAmount input onlyNum input7" maxlength="5" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" name="" value="0"></div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline2" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType2">
+						<label for="cashUnderline2">线下兑奖</label>
+						<input id="cashOnline2" class="cashOnline wxCardInput" type="radio" name="cashType2">
+						<label for="cashOnline2">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash2" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash2">
+										<label for="onlineWxCash2">微信公众号</label>
+										<input id="onlinePaCash2" class="onlinePage wxCardInput" type="radio" name="onlineCash2">
+										<label for="onlinePaCash2">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash2" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn2" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn2" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402217">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402226">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine setWxCardBox">
+						<span class="powerIcon ver_biz flag"></span>
+						<span class="flag"></span>
+						<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+						<input id="generateWxCard2" class="generateWxCard" type="radio" name="setWxCard2" disabled="">
+						<label for="generateWxCard2">同时生成微信优惠券</label>
+						<input id="closeWxCard2" class="closeWxCard" checked="" type="radio" name="setWxCard2">
+						<label for="closeWxCard2">不需要微信优惠券</label>
+
+						<div class="tipsColor" style="margin-left: 113px;">
+							请先到个人中心开通微信卡券功能
+							<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+						</div>
+
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode2" class="sysAwardCode" checked="" type="radio" name="setCusCode2">
+							<label for="sysAwardCode2">系统生成</label>
+							<input id="cusAwardCode2" class="cusAwardCode" type="radio" name="setCusCode2" disabled="">
+							<label for="cusAwardCode2">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<textarea class="cusCodeBox awardTextArea marginLeft112"></textarea>
+								<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+								<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+							</div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink2" class="closeAwardLink" checked="" type="radio" name="cusAwardLink2">
+							<label for="closeAwardLink2">关闭</label>
+							<input id="openAwardLink2" class="openAwardLink" type="radio" name="cusAwardLink2" disabled="">
+							<label for="openAwardLink2">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn2" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn2">
+							<label for="closeAwardBtn2">关闭</label>
+							<input id="openAwardBtn2" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn2">
+							<label for="openAwardBtn2">页面跳转</label>
+							<input id="newAttention2" type="radio" name="cusAwardBtn2" class="newAttention wxCardInput">
+							<label for="newAttention2">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox2" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn2" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn2" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="awardSettingBox hide ">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="四等奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值5元小礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="baseLine3 amounLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品数量：</div>
+						<input class="awardAmount input onlyNum input7" maxlength="5" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" name="" value="0"></div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline3" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType3">
+						<label for="cashUnderline3">线下兑奖</label>
+						<input id="cashOnline3" class="cashOnline wxCardInput" type="radio" name="cashType3">
+						<label for="cashOnline3">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash3" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash3">
+										<label for="onlineWxCash3">微信公众号</label>
+										<input id="onlinePaCash3" class="onlinePage wxCardInput" type="radio" name="onlineCash3">
+										<label for="onlinePaCash3">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash3" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn3" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn3" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402218">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402227">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine setWxCardBox">
+						<span class="powerIcon ver_biz flag"></span>
+						<span class="flag"></span>
+						<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+						<input id="generateWxCard3" class="generateWxCard" type="radio" name="setWxCard3" disabled="">
+						<label for="generateWxCard3">同时生成微信优惠券</label>
+						<input id="closeWxCard3" class="closeWxCard" checked="" type="radio" name="setWxCard3">
+						<label for="closeWxCard3">不需要微信优惠券</label>
+
+						<div class="tipsColor" style="margin-left: 113px;">
+							请先到个人中心开通微信卡券功能
+							<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+						</div>
+
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode3" class="sysAwardCode" checked="" type="radio" name="setCusCode3">
+							<label for="sysAwardCode3">系统生成</label>
+							<input id="cusAwardCode3" class="cusAwardCode" type="radio" name="setCusCode3" disabled="">
+							<label for="cusAwardCode3">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<textarea class="cusCodeBox awardTextArea marginLeft112"></textarea>
+								<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+								<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+							</div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink3" class="closeAwardLink" checked="" type="radio" name="cusAwardLink3">
+							<label for="closeAwardLink3">关闭</label>
+							<input id="openAwardLink3" class="openAwardLink" type="radio" name="cusAwardLink3" disabled="">
+							<label for="openAwardLink3">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn3" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn3">
+							<label for="closeAwardBtn3">关闭</label>
+							<input id="openAwardBtn3" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn3">
+							<label for="openAwardBtn3">页面跳转</label>
+							<input id="newAttention3" type="radio" name="cusAwardBtn3" class="newAttention wxCardInput">
+							<label for="newAttention3">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox3" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn3" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn3" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="awardSettingBox hide ">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="五等奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值5元小礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="baseLine3 amounLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品数量：</div>
+						<input class="awardAmount input onlyNum input7" maxlength="5" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" name="" value="0"></div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline4" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType4">
+						<label for="cashUnderline4">线下兑奖</label>
+						<input id="cashOnline4" class="cashOnline wxCardInput" type="radio" name="cashType4">
+						<label for="cashOnline4">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash4" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash4">
+										<label for="onlineWxCash4">微信公众号</label>
+										<input id="onlinePaCash4" class="onlinePage wxCardInput" type="radio" name="onlineCash4">
+										<label for="onlinePaCash4">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash4" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn4" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn4" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402219">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402228">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine setWxCardBox">
+						<span class="powerIcon ver_biz flag"></span>
+						<span class="flag"></span>
+						<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+						<input id="generateWxCard4" class="generateWxCard" type="radio" name="setWxCard4" disabled="">
+						<label for="generateWxCard4">同时生成微信优惠券</label>
+						<input id="closeWxCard4" class="closeWxCard" checked="" type="radio" name="setWxCard4">
+						<label for="closeWxCard4">不需要微信优惠券</label>
+
+						<div class="tipsColor" style="margin-left: 113px;">
+							请先到个人中心开通微信卡券功能
+							<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+						</div>
+
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode4" class="sysAwardCode" checked="" type="radio" name="setCusCode4">
+							<label for="sysAwardCode4">系统生成</label>
+							<input id="cusAwardCode4" class="cusAwardCode" type="radio" name="setCusCode4" disabled="">
+							<label for="cusAwardCode4">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<textarea class="cusCodeBox awardTextArea marginLeft112"></textarea>
+								<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+								<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+							</div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink4" class="closeAwardLink" checked="" type="radio" name="cusAwardLink4">
+							<label for="closeAwardLink4">关闭</label>
+							<input id="openAwardLink4" class="openAwardLink" type="radio" name="cusAwardLink4" disabled="">
+							<label for="openAwardLink4">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn4" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn4">
+							<label for="closeAwardBtn4">关闭</label>
+							<input id="openAwardBtn4" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn4">
+							<label for="openAwardBtn4">页面跳转</label>
+							<input id="newAttention4" type="radio" name="cusAwardBtn4" class="newAttention wxCardInput">
+							<label for="newAttention4">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox4" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn4" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn4" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="awardSettingBox hide ">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="六等奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值5元小礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="baseLine3 amounLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品数量：</div>
+						<input class="awardAmount input onlyNum input7" maxlength="5" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" name="" value="0"></div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline5" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType5">
+						<label for="cashUnderline5">线下兑奖</label>
+						<input id="cashOnline5" class="cashOnline wxCardInput" type="radio" name="cashType5">
+						<label for="cashOnline5">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash5" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash5">
+										<label for="onlineWxCash5">微信公众号</label>
+										<input id="onlinePaCash5" class="onlinePage wxCardInput" type="radio" name="onlineCash5">
+										<label for="onlinePaCash5">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash5" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn5" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn5" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402220">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402229">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine setWxCardBox">
+						<span class="powerIcon ver_biz flag"></span>
+						<span class="flag"></span>
+						<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+						<input id="generateWxCard5" class="generateWxCard" type="radio" name="setWxCard5" disabled="">
+						<label for="generateWxCard5">同时生成微信优惠券</label>
+						<input id="closeWxCard5" class="closeWxCard" checked="" type="radio" name="setWxCard5">
+						<label for="closeWxCard5">不需要微信优惠券</label>
+
+						<div class="tipsColor" style="margin-left: 113px;">
+							请先到个人中心开通微信卡券功能
+							<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+						</div>
+
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode5" class="sysAwardCode" checked="" type="radio" name="setCusCode5">
+							<label for="sysAwardCode5">系统生成</label>
+							<input id="cusAwardCode5" class="cusAwardCode" type="radio" name="setCusCode5" disabled="">
+							<label for="cusAwardCode5">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<textarea class="cusCodeBox awardTextArea marginLeft112"></textarea>
+								<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+								<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+							</div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink5" class="closeAwardLink" checked="" type="radio" name="cusAwardLink5">
+							<label for="closeAwardLink5">关闭</label>
+							<input id="openAwardLink5" class="openAwardLink" type="radio" name="cusAwardLink5" disabled="">
+							<label for="openAwardLink5">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn5" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn5">
+							<label for="closeAwardBtn5">关闭</label>
+							<input id="openAwardBtn5" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn5">
+							<label for="openAwardBtn5">页面跳转</label>
+							<input id="newAttention5" type="radio" name="cusAwardBtn5" class="newAttention wxCardInput">
+							<label for="newAttention5">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox5" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn5" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn5" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="awardSettingBox hide ">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="七等奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值5元小礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="baseLine3 amounLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品数量：</div>
+						<input class="awardAmount input onlyNum input7" maxlength="5" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" name="" value="0"></div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline6" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType6">
+						<label for="cashUnderline6">线下兑奖</label>
+						<input id="cashOnline6" class="cashOnline wxCardInput" type="radio" name="cashType6">
+						<label for="cashOnline6">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash6" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash6">
+										<label for="onlineWxCash6">微信公众号</label>
+										<input id="onlinePaCash6" class="onlinePage wxCardInput" type="radio" name="onlineCash6">
+										<label for="onlinePaCash6">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash6" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn6" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn6" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402221">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402230">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine setWxCardBox">
+						<span class="powerIcon ver_biz flag"></span>
+						<span class="flag"></span>
+						<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+						<input id="generateWxCard6" class="generateWxCard" type="radio" name="setWxCard6" disabled="">
+						<label for="generateWxCard6">同时生成微信优惠券</label>
+						<input id="closeWxCard6" class="closeWxCard" checked="" type="radio" name="setWxCard6">
+						<label for="closeWxCard6">不需要微信优惠券</label>
+
+						<div class="tipsColor" style="margin-left: 113px;">
+							请先到个人中心开通微信卡券功能
+							<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+						</div>
+
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode6" class="sysAwardCode" checked="" type="radio" name="setCusCode6">
+							<label for="sysAwardCode6">系统生成</label>
+							<input id="cusAwardCode6" class="cusAwardCode" type="radio" name="setCusCode6" disabled="">
+							<label for="cusAwardCode6">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<textarea class="cusCodeBox awardTextArea marginLeft112"></textarea>
+								<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+								<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+							</div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink6" class="closeAwardLink" checked="" type="radio" name="cusAwardLink6">
+							<label for="closeAwardLink6">关闭</label>
+							<input id="openAwardLink6" class="openAwardLink" type="radio" name="cusAwardLink6" disabled="">
+							<label for="openAwardLink6">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn6" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn6">
+							<label for="closeAwardBtn6">关闭</label>
+							<input id="openAwardBtn6" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn6">
+							<label for="openAwardBtn6">页面跳转</label>
+							<input id="newAttention6" type="radio" name="cusAwardBtn6" class="newAttention wxCardInput">
+							<label for="newAttention6">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox6" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn6" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn6" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="awardSettingBox hide ">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="八等奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值5元小礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="baseLine3 amounLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品数量：</div>
+						<input class="awardAmount input onlyNum input7" maxlength="5" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" name="" value="0"></div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline7" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType7">
+						<label for="cashUnderline7">线下兑奖</label>
+						<input id="cashOnline7" class="cashOnline wxCardInput" type="radio" name="cashType7">
+						<label for="cashOnline7">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash7" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash7">
+										<label for="onlineWxCash7">微信公众号</label>
+										<input id="onlinePaCash7" class="onlinePage wxCardInput" type="radio" name="onlineCash7">
+										<label for="onlinePaCash7">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash7" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn7" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn7" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402222">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402231">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine setWxCardBox">
+						<span class="powerIcon ver_biz flag"></span>
+						<span class="flag"></span>
+						<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+						<input id="generateWxCard7" class="generateWxCard" type="radio" name="setWxCard7" disabled="">
+						<label for="generateWxCard7">同时生成微信优惠券</label>
+						<input id="closeWxCard7" class="closeWxCard" checked="" type="radio" name="setWxCard7">
+						<label for="closeWxCard7">不需要微信优惠券</label>
+
+						<div class="tipsColor" style="margin-left: 113px;">
+							请先到个人中心开通微信卡券功能
+							<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+						</div>
+
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode7" class="sysAwardCode" checked="" type="radio" name="setCusCode7">
+							<label for="sysAwardCode7">系统生成</label>
+							<input id="cusAwardCode7" class="cusAwardCode" type="radio" name="setCusCode7" disabled="">
+							<label for="cusAwardCode7">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<textarea class="cusCodeBox awardTextArea marginLeft112"></textarea>
+								<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+								<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+							</div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink7" class="closeAwardLink" checked="" type="radio" name="cusAwardLink7">
+							<label for="closeAwardLink7">关闭</label>
+							<input id="openAwardLink7" class="openAwardLink" type="radio" name="cusAwardLink7" disabled="">
+							<label for="openAwardLink7">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn7" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn7">
+							<label for="closeAwardBtn7">关闭</label>
+							<input id="openAwardBtn7" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn7">
+							<label for="openAwardBtn7">页面跳转</label>
+							<input id="newAttention7" type="radio" name="cusAwardBtn7" class="newAttention wxCardInput">
+							<label for="newAttention7">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox7" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn7" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn7" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="awardSettingBox hide anweiBox">
+					<div class="baseLine awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项等级：</div>
+						<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" value="安慰奖"></div>
+
+					<div class="baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖品类型：</div>
+						<div class="awardTypeSetBox in-bl">
+							<div class="awardTypeValue divBeInput " value="2">
+								<span class="type">
+									<span class="type">礼品</span>
+								</span>
+								<div class="detailIcon"></div>
+							</div>
+
+							<div class="awardTypeBox hide" style="display: none;">
+								<div class="option checked" checked="" value="2">
+									<span class="type">礼品</span>
+								</div>
+								<div class="option" value="0">
+									<span class="type">门店优惠券</span>
+								</div>
+								<div class="option" value="1">
+									<span class="type">电商优惠券</span>
+								</div>
+
+							</div>
+						</div>
+						<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+					</div>
+
+					<div class="awardDescribeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">奖项名称：</div>
+						<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" value="价值5元小礼品">
+						<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+					</div>
+
+					<div class="setCashTypeBox baseLine1 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="awardTitle">兑奖方式：</div>
+						<input id="cashUnderline8" checked="" class="cashUnderline wxCardInput" type="radio" name="cashType8">
+						<label for="cashUnderline8">线下兑奖</label>
+						<input id="cashOnline8" class="cashOnline wxCardInput" type="radio" name="cashType8">
+						<label for="cashOnline8">线上兑奖</label>
+					</div>
+					<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+						<span class="flag">*</span>
+						<div class="awardTitle">操作提示：</div>
+						<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" value="凭券联系现场工作人员兑奖"></div>
+					<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+						<div class="floatLeft">
+							<span class="flag" style="vertical-align: top;">*</span>
+							<div class="awardTitle">兑奖地址：</div>
+							<div style="display:inline-block;vertical-align: top;">
+								<div>
+									<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" value="请填写您的兑奖地址或者门店地址"></div>
+							</div>
+						</div>
+						<div class="floatLeft theRightPart">
+							<div>
+								<div class="onlineSelect" style="display:none">
+									<div>
+										<input id="onlineWxCash8" checked="" class="onlineWx wxCardInput" type="radio" name="onlineCash8">
+										<label for="onlineWxCash8">微信公众号</label>
+										<input id="onlinePaCash8" class="onlinePage wxCardInput" type="radio" name="onlineCash8">
+										<label for="onlinePaCash8">网页地址</label>
+									</div>
+									<div class="baseLine3 onlineCashBox">
+										<span class="flag" style="vertical-align:top;">*</span>
+										<span class="onlineCashName" style="vertical-align:top;">微信公众号：</span>
+										<input class="awardCashSite2 input input6 blurCheck wxCardInput hide" type="text" value="请填写您的兑奖地址或者门店地址">
+										<div id="OnlineCash8" style="display:inline-block;" class="OnlineCashBox">
+											<div class="onlineCashImg comUploadImg">
+												<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+											<div class="QRloaBox comUploadBox chooseImg ">
+												<span id="onlineWxCashUpBtn8" class="btn">
+													<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+													<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+												</span>
+												<a id="onlineWxCashBtn8" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+						<span class="flag">*</span>
+						<div class="usePeriod awardTitle">兑奖期限：</div>
+						<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-21" id="dp1466496402223">
+						至
+						<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" value="2016-06-28" id="dp1466496402232">
+						<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+					</div>
+					<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+						<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+						<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+					</div>
+
+					<div class="baseLine3 awardSettingLine">
+						<div class="showAwardDetailLine pointer" style="padding-right:28px;">
+							<span style="margin-left: 17px;">详情设置</span>
+							<div class="detailIcon awardDetailIcon"></div>
+						</div>
+						<div style="border-bottom:1px #DCDCDC dashed;width:420px;margin:auto;"></div>
+					</div>
+					<div class="awardDetailSetting ">
+						<div class="baseLine3 awardSettingLine setCusCodeBox">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+							<input id="sysAwardCode8" class="sysAwardCode" checked="" type="radio" name="setCusCode8">
+							<label for="sysAwardCode8">系统生成</label>
+							<input id="cusAwardCode8" class="cusAwardCode" type="radio" name="setCusCode8" disabled="">
+							<label for="cusAwardCode8">手工导入</label>
+
+							<div class="cusCodeInputBox hide">
+								<input type="text" id="anweiCuscode" class="cusCodeBox input input5 marginLeft112" value=""></div>
+
+						</div>
+
+						<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+							<span class="powerIcon ver_biz flag"></span>
+							<span class="flag"></span>
+							<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+							<input id="closeAwardLink8" class="closeAwardLink" checked="" type="radio" name="cusAwardLink8">
+							<label for="closeAwardLink8">关闭</label>
+							<input id="openAwardLink8" class="openAwardLink" type="radio" name="cusAwardLink8" disabled="">
+							<label for="openAwardLink8">开启</label>
+							<div class="tipsColor" style="margin-left: 102px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+						</div>
+						<div class="awardOtherSetting">
+
+							<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">副标题：</div>
+								<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" value=""></div>
+
+							<div class="setServicePhoneBox baseLine3 awardSettingLine">
+								<span class="flag"></span>
+								<div class="awardTitle">客服电话：</div>
+								<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" value=""></div>
+
+						</div>
+
+						<div class="setCashInfoBox baseLine3 awardSettingLine ">
+							<span class="flag"></span>
+							<div class="awardTitle alignTop">
+								<span class="cashTitle">兑奖</span>
+								须知：
+							</div>
+							<textarea class="cashInfoContent input awardTextArea wxCardInput"></textarea>
+						</div>
+
+						<div class="setAwardBtnBox baseLine3 awardSettingLine  ">
+							<span class="flag"></span>
+							<div class="awardTitle">自定义按钮：</div>
+							<input id="closeAwardBtn8" checked="" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn8">
+							<label for="closeAwardBtn8">关闭</label>
+							<input id="openAwardBtn8" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn8">
+							<label for="openAwardBtn8">页面跳转</label>
+							<input id="newAttention8" type="radio" name="cusAwardBtn8" class="newAttention wxCardInput">
+							<label for="newAttention8">一键关注</label>
+							<div class="awardBtnBox hide" style="padding-left: 98px; display: none;">
+								<div class="setAwardCusBtnBox baseLine3">
+									<span class="flag">*</span>
+									按钮名称：
+									<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput hide" maxlength="5" type="text" value="企业官网">
+									<input class=" input input6 blurCheck oneAttention wxCardInput hide" maxlength="5" type="text" value="关注我们"></div>
+								<div class="baseLine3">
+									<span class="flag"></span>
+									<span class="AttentionName">微信公众号：</span>
+									<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="">
+									<div id="AttentionBox8" style="display:none;" class="AttentionBox">
+										<div class="attentionImg comUploadImg">
+											<img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+										<div class="QRloaBox comUploadBox chooseImg ">
+											<span id="AtentionBtn8" class="btn">
+												<input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+												<a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+											</span>
+											<a id="attentionBtn8" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration:underline; display:block;">如何找到公众号二维码？</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

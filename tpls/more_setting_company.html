@@ -1,0 +1,90 @@
+<div id="companySetBox" class="subTabsettingBox">
+    <div class="hostNameWrap baseLine2">
+        <div>
+            <span class="flag">*</span>
+            <span class="baseSettingTitle">主办单位：</span>
+            <input type="text" id="hostName" maxlength="24" class="input input1" value=""></div>
+        <div class="baseLine1">
+            <span class="flag"></span>
+            <span class="baseSettingTitle">链接地址：</span>
+            <input class="input input1" id="hostLink" type="text" value="http://"></div>
+    </div>
+    <div id="uploadLogoWrap">
+        <div class="baseLine1">
+            <span class="flag"></span>
+            <span class="baseSettingTitle">企业Logo：</span>
+            <input id="hideLogo" type="radio" name="isShowLogo" checked="checked">
+            <label for="hideLogo">隐藏</label>
+            <input id="showLogo" type="radio" name="isShowLogo" style="margin-left: 10px;" checked="">
+            <label for="showLogo">显示</label>
+        </div>
+        <div id="uploadLogo" class="menuBox mg110" style="display: none;">
+            <div class="logoImg comUploadImg">
+                <img src="//hd.faisys.com/image/nopic.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+            <div class="comUploadBox chooseImg">
+                <span id="uploadButton" class="btn">
+                    <input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+                    <a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+                </span>
+                <div class="comUploadExplain">请上传jpg、png、gif格式的图片</div>
+            </div>
+        </div>
+    </div>
+    <div class="baseLine1">
+        <span class="flag"></span>
+        <span class="baseSettingTitle">页面加载图片：</span>
+        <input id="loadingDef" type="radio" name="loadingStyle" checked="checked">
+        <label for="loadingDef">默认</label>
+        <!-- <input id="loadingClose" type="radio" name="loadingStyle" />
+        <label for="loadingClose">隐藏</label>
+        -->
+        <input id="loadingCustom" type="radio" name="loadingStyle">
+        <label for="loadingCustom">自定义</label>
+    </div>
+    <div id="loadingCustomBox" class="menuBox mg110" style="display:none;">
+        <div class="loadingCustomImg comUploadImg">
+            <img src="//hd.faisys.com/image/pic2.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+        <div class="comUploadBox chooseImg">
+            <span id="loadingCustomButton" class="btn">
+                <input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+                <a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+            </span>
+            <div class="comUploadExplain">请上传jpg、png、gif格式的图片</div>
+        </div>
+    </div>
+    <div class="menuBoxWrap baseLine1">
+        <div class="baseLine1">
+            <span class="flag"></span>
+            <span class="baseSettingTitle">功能按钮：</span>
+            <input id="closeMenu" type="radio" name="menuStyle">
+            <label for="closeMenu">隐藏</label>
+            <input id="jumpPage" type="radio" name="menuStyle">
+            <label for="jumpPage">页面跳转</label>
+            <input id="attention" type="radio" name="menuStyle" checked="checked">
+            <label for="attention">一键关注</label>
+        </div>
+        <div id="menuBox" class="menuBox mg110">
+            <div class="baseLine">
+                <span class="flag">*</span>
+                按钮名称：
+                <input type="text" id="menuName" maxlength="5" class="menuName input input2" value="企业官网" style="display: none;">
+                <input type="text" id="menuName1" maxlength="5" class="menuName input input2" value="关注我们" style="margin-left: 12px;"></div>
+            <div class="baseLine1">
+                <span class="flag"></span>
+                <span id="menuLinkSpan" style="vertical-align: top;">微信公众号：</span>
+                <input type="text" id="menuLink" class="input input2" value="" style="display: none;">
+                <div id="QRCodeBox" style="">
+                    <div class="QRImg comUploadImg">
+                        <img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+                    <div class="QRloaBox comUploadBox chooseImg">
+                        <span id="QRloadButton" class="btn">
+                            <input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+                            <a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+                        </span>
+                        <a id="attentionUnderstand" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration: underline;">如何找到公众号二维码？</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

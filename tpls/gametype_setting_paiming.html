@@ -1,0 +1,66 @@
+<div id="drawSetBox" class="subTabsettingBox" style="background-color: #fff;">
+
+	<div class="baseLine1 " id="drawConditionBox" style="display: none;">
+
+		<span class="flag"></span>
+		<span class="baseSettingTitle3">
+			<span id="drawFont">领取</span>
+			门槛：
+		</span>
+		游戏成绩达到
+		<input id="drawLimit" maxlength="4" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" style="width:30px;" value="10">
+		秒，即为挑战成功可
+		<span id="drawDesc">领取礼品</span>
+		<span id="drawLimitErr" style="margin-left: 176px;color:red;display:none">输入不能为空！</span>
+	</div>
+
+	<div id="drawInfoBox" class="baseLine1" style="display: none;">
+
+		<div style="margin-bottom: 10px;line-height: 30px;">
+			<span style="margin-left:20px;margin-right:22px;">总抽奖机会：</span>
+			<input type="radio" id="noLimitDrawTimes" name="isLimitDrawTimes" style="margin-left: 10px;" checked="checked">
+			<label for="noLimitDrawTimes">不限</label>
+			<input type="radio" id="limitDrawTimes" name="isLimitDrawTimes" style="margin-left: 10px;">
+			<label for="limitDrawTimes" style="margin-right:0px;">限制</label>
+			<span id="setDrawTotalBox" class="hide" style="display: none;">
+				每人最多有
+				<input id="drawTotalTimes" maxlength="2" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" style="width:30px;" value="6">次</span>
+			<div id="drawTotalLimitErr" style="color:red;display:none;margin-left: 118px;">限制总抽奖机会必须大于或等于每日抽奖机会</div>
+		</div>
+
+		<span class="flag"></span>
+		<span class="baseSettingTitle3">每日抽奖机会：</span>
+		每人每日有
+		<input id="drawTimesLimit" maxlength="2" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" style="width:30px;" value="3">
+		次抽奖机会
+		<span class="flag"></span>
+		<span id="drawTimesLimitErr" style="color:red;display:none;margin-left: -13px;">最少1次最多10次</span>
+
+		<div id="prizedTotalBox" class="" style="margin-top: 20px; display: block;">
+			<span class="flag"></span>
+			<span class="baseSettingTitle3">每人中奖次数：</span>
+			每人最多可中奖
+			<input id="awardTimesLimit" maxlength="2" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" style="width:30px;" value="1">
+			次
+			<span class="flag"></span>
+			<span id="awardTimesLimitErr" style="color:red;display:none;margin-left: -13px;">最少1次最多10次</span>
+		</div>
+
+		<div style="margin-top: 10px;margin-left: 20px;">
+			总中奖率：
+			<input id="winningRate" class="input onlyNum input4" onkeypress="javascript:return Fai.isFloatKey(event);" type="text" value="30.0">
+			%
+			<span style="display: block;margin-left: 0px; margin-top:8px;" id="winningRateTip" class="g_tip" _expplayer="10">这意味着每10次抽奖3次获奖</span>
+		</div>
+
+	</div>
+	<div id="openAwardLinkNoDrawBox" class="baseLine1 hide" style="padding-left: 10px; display: block;">
+		<span style="margin-right: 4px;" class="powerIcon ver_biz flag"></span>
+		<span class="baseSettingTitle">联系兑奖：</span>
+		<input type="radio" id="openAwardLinkNoDraw" name="awardLinkNoDraw" disabled="">
+		<label for="openAwardLinkNoDraw">开启</label>
+		<input type="radio" id="closeAwardLinkNoDraw" name="awardLinkNoDraw" style="margin-left: 10px;" checked="">
+		<label for="closeAwardLinkNoDraw" style="margin-right:0">关闭</label>
+		<div class="tipsColor" style="margin-left:122px;line-height:20px;">开启后，玩家报名参与抽奖必须填写联系电话</div>
+	</div>
+</div>

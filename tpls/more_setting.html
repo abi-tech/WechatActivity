@@ -1,0 +1,280 @@
+<div id="moreSetting" class="settingBox hide" style="display: none;">
+    <div id="activeTabSubMenu">
+        <!--
+                                -->
+        <div class="column" onclick="changeTabSubMenu(this,event);">企业信息</div>
+        <!--            
+                                -->
+        <div class="column" onclick="changeTabSubMenu(this,event);">游戏设置</div>
+        <!--
+                                -->
+        <div class="column" onclick="changeTabSubMenu(this,event);">分享设置</div>
+        <!--
+                                -->
+        <div class="slideBar">
+            <div class="slideBarTip transitionPanel" style="left: 15px"></div>
+        </div>
+    </div>
+    <div id="footSetting" class="footSetting">
+        <div id="companySetBox" class="subTabsettingBox">
+            <div class="hostNameWrap baseLine2">
+                <div>
+                    <span class="flag">*</span>
+                    <span class="baseSettingTitle">主办单位：</span>
+                    <input type="text" id="hostName" maxlength="24" class="input input1" value=""></div>
+                <div class="baseLine1">
+                    <span class="flag"></span>
+                    <span class="baseSettingTitle">链接地址：</span>
+                    <input class="input input1" id="hostLink" type="text" value="http://"></div>
+            </div>
+            <div id="uploadLogoWrap">
+                <div class="baseLine1">
+                    <span class="flag"></span>
+                    <span class="baseSettingTitle">企业Logo：</span>
+                    <input id="hideLogo" type="radio" name="isShowLogo" checked="checked">
+                    <label for="hideLogo">隐藏</label>
+                    <input id="showLogo" type="radio" name="isShowLogo" style="margin-left: 10px;" checked="">
+                    <label for="showLogo">显示</label>
+                </div>
+                <div id="uploadLogo" class="menuBox mg110" style="display: none;">
+                    <div class="logoImg comUploadImg">
+                        <img src="//hd.faisys.com/image/nopic.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+                    <div class="comUploadBox chooseImg">
+                        <span id="uploadButton" class="btn">
+                            <input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+                            <a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+                        </span>
+                        <div class="comUploadExplain">请上传jpg、png、gif格式的图片</div>
+                    </div>
+                </div>
+            </div>
+            <div class="baseLine1">
+                <span class="flag"></span>
+                <span class="baseSettingTitle">页面加载图片：</span>
+                <input id="loadingDef" type="radio" name="loadingStyle" checked="checked">
+                <label for="loadingDef">默认</label>
+                <!-- <input id="loadingClose" type="radio" name="loadingStyle" />
+                <label for="loadingClose">隐藏</label>
+                -->
+                <input id="loadingCustom" type="radio" name="loadingStyle">
+                <label for="loadingCustom">自定义</label>
+            </div>
+            <div id="loadingCustomBox" class="menuBox mg110" style="display:none;">
+                <div class="loadingCustomImg comUploadImg">
+                    <img src="//hd.faisys.com/image/pic2.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+                <div class="comUploadBox chooseImg">
+                    <span id="loadingCustomButton" class="btn">
+                        <input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+                        <a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+                    </span>
+                    <div class="comUploadExplain">请上传jpg、png、gif格式的图片</div>
+                </div>
+            </div>
+            <div class="menuBoxWrap baseLine1">
+                <div class="baseLine1">
+                    <span class="flag"></span>
+                    <span class="baseSettingTitle">功能按钮：</span>
+                    <input id="closeMenu" type="radio" name="menuStyle">
+                    <label for="closeMenu">隐藏</label>
+                    <input id="jumpPage" type="radio" name="menuStyle">
+                    <label for="jumpPage">页面跳转</label>
+                    <input id="attention" type="radio" name="menuStyle" checked="checked">
+                    <label for="attention">一键关注</label>
+                </div>
+                <div id="menuBox" class="menuBox mg110">
+                    <div class="baseLine">
+                        <span class="flag">*</span>
+                        按钮名称：
+                        <input type="text" id="menuName" maxlength="5" class="menuName input input2" value="企业官网" style="display: none;">
+                        <input type="text" id="menuName1" maxlength="5" class="menuName input input2" value="关注我们" style="margin-left: 12px;"></div>
+                    <div class="baseLine1">
+                        <span class="flag"></span>
+                        <span id="menuLinkSpan" style="vertical-align: top;">微信公众号：</span>
+                        <input type="text" id="menuLink" class="input input2" value="" style="display: none;">
+                        <div id="QRCodeBox" style="">
+                            <div class="QRImg comUploadImg">
+                                <img src="//hd.faisys.com/image/qrcodeImg.jpg" style="width:100%;height:auto; vertical-align:bottom"></div>
+                            <div class="QRloaBox comUploadBox chooseImg">
+                                <span id="QRloadButton" class="btn">
+                                    <input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+                                    <a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+                                </span>
+                                <a id="attentionUnderstand" class="comUploadExplain" target="_blank" href="http://jz.faisco.com/blog/1647" style="text-decoration: underline;">如何找到公众号二维码？</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+                                <div id="drawSetBox" class="subTabsettingBox hide">
+        <div id="drawInfoBox" class="baseLine1">
+
+            <div style="margin-bottom: 10px;line-height: 30px;">
+                <span style="margin-left:20px;margin-right:22px;">总抽奖机会：</span>
+                <input type="radio" id="noLimitDrawTimes" name="isLimitDrawTimes" style="margin-left: 10px;" />
+                <label for="noLimitDrawTimes">不限</label>
+                <input type="radio" id="limitDrawTimes" name="isLimitDrawTimes" style="margin-left: 10px;" />
+                <label for="limitDrawTimes" style="margin-right:0px;">限制</label>
+                <span id="setDrawTotalBox" class="hide">
+                    每人最多有
+                    <input id="drawTotalTimes" maxlength="2" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text"  style="width:30px;" value="6" />
+                    次
+                </span>
+                <div id="drawTotalLimitErr" style="color:red;display:none;margin-left: 118px;" >限制总抽奖机会必须大于或等于每日抽奖机会</div>
+            </div>
+
+            <span class="flag"></span>
+            <span class="baseSettingTitle3">每日抽奖机会：</span>
+            每人每日有
+            <input id="drawTimesLimit" maxlength="2" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text"  style="width:30px;" value="3" />
+            次抽奖机会
+            <span class="flag"></span>
+            <span id="drawTimesLimitErr" style="color:red;display:none;" >最少1次最多10次</span>
+
+        </div>
+
+    </div>
+    -->
+    <div id="gameSetBox" class="subTabsettingBox hide">
+        <div class="baseLine1">
+            <span style="margin-right: 4px;" class="powerIcon ver_biz flag"></span>
+            <span class="baseSettingTitle">页脚广告：</span>
+            <input type="radio" id="ShowSkillSup" name="isShowSkillSup" checked="">
+            <label for="ShowSkillSup">显示</label>
+            <input type="radio" id="hideSkillSup" name="isShowSkillSup" style="margin-left: 10px;" disabled="disabled">
+            <label for="hideSkillSup">隐藏</label>
+        </div>
+        <div class="skillMsg mg110 baseLine tipsColor">隐藏页脚广告为互动商务版功能，保存后可在活动列表中升级该活动</div>
+        <!--<div id="openAwardLinkNoDrawBox" class="baseLine1 hide">
+        <span style="margin-right: 4px;" class="powerIcon ver_biz flag"></span>
+        <span class="baseSettingTitle">联系兑奖：</span>
+        <input type="radio" id="openAwardLinkNoDraw" name="awardLinkNoDraw" disabled/>
+        <label for="openAwardLinkNoDraw">开启</label>
+        <input type="radio" id="closeAwardLinkNoDraw" name="awardLinkNoDraw" style="margin-left: 10px;" checked />
+        <label for="closeAwardLinkNoDraw" style="margin-right:0">关闭</label>
+        <div class="tipsColor" style="margin-left:122px;line-height:20px;"></div>
+    </div>
+    -->
+    <div class="baseLine1">
+        <span style="margin-right: 4px;" class="powerIcon ver_biz flag"></span>
+        <span class="baseSettingTitle">轮播获奖信息：</span>
+        <input type="radio" id="openSlide" name="showSlide" disabled="">
+        <label for="openSlide">开启</label>
+        <input type="radio" id="hideSlide" name="showSlide" checked="checked">
+        <label for="hideSlide">关闭</label>
+        <div class="introTips" style="margin-left:115px; margin-top:2px; color:#808080; font-size:12px; line-height:22px">
+            有三名以上玩家获奖后，活动首页将轮播展示玩家中奖信息
+            <br>轮播中奖信息为互动商务版功能，保存后可在活动列表中升级该活动</div>
+    </div>
+
+</div>
+<div id="shareSetBox" class="subTabsettingBox hide">
+    <div class="baseLine1">
+        <span class="flag"></span>
+        <span class="baseSettingTitle" style="width:84px; margin-right:6px;">微信分享图标：</span>
+        <input id="defWxShare" type="radio" name="wxShare" checked="checked">
+        <label for="defWxShare">默认</label>
+        <input id="cusWxShare" type="radio" name="wxShare">
+        <label for="cusWxShare">自定义</label>
+    </div>
+    <div id="uploadWxShare" class="menuBox mg110" style="display:none;">
+        <div class="wxShareImg comUploadImg">
+            <img src="//hd.faisys.com/image/game/l_zhuanpan.jpg?v=201508111845" style="width:100%;height:auto; vertical-align:bottom"></div>
+        <div class="comUploadBox chooseImg">
+            <span id="wxShareUploadButton" class="btn">
+                <input id="select_btn_1" class="selectbtn" style="display:none;" type="file" name="fileselect[]" accept="image/jpg,image/png,image/gif,image/jpeg">
+                <a id="file_upload_1-button" href="###" class="uploadify-button">选择图片</a>
+            </span>
+            <div class="comUploadExplain">请上传30K以内，格式为jpg、png、gif的图片</div>
+        </div>
+    </div>
+    <div class="baseLine1">
+        <span class="powerIcon marginLeft7 ver_biz flag"></span>
+        <span class="baseSettingTitle" style="width:84px; margin-right:6px;">微信分享内容：</span>
+        <input id="defWxShareText" type="radio" name="wxShareText" checked="checked">
+        <label for="defWxShareText">默认</label>
+        <input id="cusWxShareText" type="radio" name="wxShareText" disabled="">
+        <label for="cusWxShareText">自定义</label>
+    </div>
+    <div id="wxShareTextWrap" class="hide" style="display: none;">
+
+        <div class="mg110 wxShareTextBox hide">
+            <div class="wxShareTextTitelBox" style="color: #555;">
+                <div class="wxShareTextTitel">null</div>
+                <div class="wxShareTextOther" style="border-left:0;" unselectable="on" onmousedown="return false">
+                    <span class="insertIco" unselectable="on"></span>
+                    插入
+                </div>
+                <div class="tagOptionsBox" style="background-color:#fff"></div>
+            </div>
+            <div class="wxShareTextContent input" style="background-color:#fff" contenteditable="true">
+                ​null
+                <br></div>
+        </div>
+
+        <div class="mg110 wxShareTextBox ">
+            <div class="wxShareTextTitelBox" style="color: #555;">
+                <div class="wxShareTextTitel">分享内容（没有获奖的玩家）</div>
+                <div class="wxShareTextOther" style="border-left:0;" unselectable="on" onmousedown="return false">
+                    <span class="insertIco" unselectable="on"></span>
+                    插入
+                </div>
+                <div class="tagOptionsBox" style="background-color:#fff">
+
+                    <div class="tagOptions" unselectable="on">玩家名称</div>
+
+                </div>
+            </div>
+            <div class="wxShareTextContent input" style="background-color:#fff" contenteditable="true">
+                ​轻轻松松就能抽到大奖，积攒多年的人品终于有用了，你也赶紧来抽奖吧！！
+                <br></div>
+        </div>
+
+        <div class="mg110 wxShareTextBox hide">
+            <div class="wxShareTextTitelBox" style="color: #555;">
+                <div class="wxShareTextTitel">null</div>
+                <div class="wxShareTextOther" style="border-left:0;" unselectable="on" onmousedown="return false">
+                    <span class="insertIco" unselectable="on"></span>
+                    插入
+                </div>
+                <div class="tagOptionsBox" style="background-color:#fff"></div>
+            </div>
+            <div class="wxShareTextContent input" style="background-color:#fff" contenteditable="true">
+                ​null
+                <br></div>
+        </div>
+
+        <div class="mg110 wxShareTextBox ">
+            <div class="wxShareTextTitelBox" style="color: #555;">
+                <div class="wxShareTextTitel">分享内容（获奖的玩家）</div>
+                <div class="wxShareTextOther" style="border-left:0;" unselectable="on" onmousedown="return false">
+                    <span class="insertIco" unselectable="on"></span>
+                    插入
+                </div>
+                <div class="tagOptionsBox" style="background-color:#fff">
+
+                    <div class="tagOptions" unselectable="on">玩家名称</div>
+
+                    <div class="tagOptions" unselectable="on">奖项等级</div>
+
+                    <div class="tagOptions" unselectable="on">奖品名称</div>
+
+                </div>
+            </div>
+            <div class="wxShareTextContent input" style="background-color:#fff" contenteditable="true">
+                ​我已经在活动中抽到了奖品，你也快来抽大奖吧！
+                <br></div>
+        </div>
+
+        <div id="wxShareWarm" class="hide">注：若奖品名称、奖项等级中含有敏感词如”红包“，分享时系统会自动屏蔽敏感词。</div>
+    </div>
+
+    <div id="wxShareWarm2" class="tipsColor">
+        注：页面及分享信息请遵守微信朋友圈管理规定，请勿出现违规信息，否则有可能导致活动分享到朋友圈仅自己可见
+        <a href="http://hd.faisco.com/news/4454" target="blank" class="tipsColor underline">了解更多</a>
+    </div>
+</div>
+</div>
+</div>

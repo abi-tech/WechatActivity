@@ -1,0 +1,207 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+    font: .6rem Microsoft YaHei,Helvitica,Verdana,Arial,san-serif
+}
+
+.activity-lottery-winning {
+    background-color: #572967;
+    min-width: 16rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%
+}
+
+.activity-coupon-winning {
+    background-color: #8d0001
+}
+
+.activity-coupon-end {
+    background-color: #8d0001
+}
+
+.activity-lottery-winning .main {
+    position: relative;
+    background-color: #a72058
+}
+
+body {
+    font-size: .7rem
+}
+
+#outer-cont {
+    z-index: 5;
+    position: relative;
+    width: 100%;
+    padding-top: 2.45rem;
+    //overflow: hidden
+}
+
+.zhuanpanBg {
+    background-image: url(../image/zhuanpan/zbg.png?v=201605161742);
+    width: 100%;
+    height: 16.05rem;
+    position: absolute;
+    background-size: 15.5rem;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: 50% .5rem;
+    top: 2.25rem
+}
+
+.soundIcon {
+    z-index: 100
+}
+
+.poupFooter {
+    position: absolute!important;
+    bottom: .75rem;
+    left: 0rem;
+    right: 0rem
+}
+
+#inner-cont {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    top: 6.5rem
+}
+
+#outer {
+    width: 15.5rem;
+    height: 15.45rem;
+    margin: 0 auto;
+    display: block
+}
+
+#outerImg {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0)
+}
+
+#inner {
+    width: 5.6rem;
+    max-width: 5.6rem;
+    height: 6.45rem;
+    margin: 0 auto;
+    cursor: pointer
+}
+
+#inner img {
+    width: 100%;
+    height: 100%
+}
+
+#outer img,#inner img {
+    display: block;
+    margin: 0 auto
+}
+
+.outer-background {
+    height: 7.05rem;
+    position: absolute;
+    width: 100%;
+    top: 12.25rem
+}
+
+.gameInfoBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+#outercont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.cover {
+    width: 16rem;
+    max-width: 24rem;
+    margin: 0 auto;
+    position: relative
+}
+
+.cover img {
+    width: 16rem
+}
+
+#scratchpad,#prize {
+    position: absolute;
+    width: 7.5rem;
+    height: 2rem;
+    top: 7rem;
+    left: 5.25rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #333
+}
+
+.btn-cont {
+    position: absolute;
+    bottom: .15rem;
+    right: .15rem;
+    display: none
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.main img {
+    max-width: 100%;
+    border: 0 none
+}
+
+.startBtn {
+    background-image: url(../image/zhuanpan/pp7.png?v=201605161742);
+    width: 9.15rem;
+    height: 2.25rem;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-size: contain
+}
+
+.content .center_txt {
+    color: #fcfaf8;
+    text-align: center;
+    line-height: 1.2rem;
+    padding-bottom: .25rem
+}
+
+.content .ipt_num {
+    color: #fff500;
+    font-size: .8rem;
+    display: inline-block;
+    margin: 0rem .25rem
+}
+
+.txt_style_1 {
+    color: #fcfaf8;
+    font-size: .6rem
+}
+
+.line_txt {
+    color: white;
+    margin-bottom: 1rem;
+    padding: 0rem .5rem;
+    font-size: .7rem
+}
+
+.line_txt span {
+    display: block
+}
+
+.ipt_num a {
+    color: #fff500;
+    font-size: .7rem
+}
