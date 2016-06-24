@@ -4,7 +4,7 @@
 	</div>
 	<div class="menuBox" style="padding:0">
 		<div class="setGameTypeBox relative" style="border-bottom: 1px solid #dcdcdc;">
-			<div class="iconBox pointer in-bl setGameType checked" style="border-left:none;" _gametype="0">
+			<div class="iconBox pointer in-bl setGameType checked" style="border-left:none;">
 				<div class="iconOuter ">
 					<div class="drawIcon icon"></div>
 				</div>
@@ -12,7 +12,7 @@
 			</div>
 			<!--
 			-->
-			<div class="iconBox pointer in-bl setGameType" _gametype="4">
+			<div class="iconBox pointer in-bl setGameType">
 				<div class="iconOuter disabled">
 					<div class="sendIcon icon"></div>
 				</div>
@@ -20,7 +20,7 @@
 			</div>
 			<!--
 		 -->
-			<div class="iconBox pointer in-bl setGameType" _gametype="3">
+			<div class="iconBox pointer in-bl setGameType">
 				<div class="iconOuter disabled">
 					<div class="rankIcon icon"></div>
 				</div>
@@ -28,7 +28,7 @@
 			</div>
 			<!--
 		 -->
-			<div class="iconBox pointer in-bl setGameType" _gametype="1">
+			<div class="iconBox pointer in-bl setGameType">
 				<div class="iconOuter disabled">
 					<div class="regIcon icon"></div>
 				</div>
@@ -46,20 +46,20 @@
 
 				<div style="margin-bottom: 10px;line-height: 30px;">
 					<span style="margin-left:20px;margin-right:22px;">总抽奖机会：</span>
-					<input type="radio" id="noLimitDrawTimes" name="isLimitDrawTimes" style="margin-left: 10px;" checked="checked">
+					<input type="radio" id="noLimitDrawTimes" name="isLimitDrawTimes" style="margin-left: 10px;" value="false" ng-model="settings.gametypeSetting.isLimitDrawTimes"/>
 					<label for="noLimitDrawTimes">不限</label>
-					<input type="radio" id="limitDrawTimes" name="isLimitDrawTimes" style="margin-left: 10px;">
+					<input type="radio" id="limitDrawTimes" name="isLimitDrawTimes" style="margin-left: 10px;" value="true" ng-model="settings.gametypeSetting.isLimitDrawTimes"/>
 					<label for="limitDrawTimes" style="margin-right:0px;">限制</label>
-					<span id="setDrawTotalBox" class="hide" style="display: none;">
+					<span id="setDrawTotalBox" ng-show="settings.gametypeSetting.isLimitDrawTimes == 'true'">
 						每人最多有
-						<input id="drawTotalTimes" maxlength="2" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" style="width:30px;" value="6">次</span>
+						<input id="drawTotalTimes" maxlength="2" class="onlyNum" type="text" style="width:30px;" ng-model="settings.gametypeSetting.drawTotalTimes">次</span>
 					<div id="drawTotalLimitErr" style="color:red;display:none;margin-left: 118px;">限制总抽奖机会必须大于或等于每日抽奖机会</div>
 				</div>
 
 				<span class="flag"></span>
 				<span class="baseSettingTitle3">每日抽奖机会：</span>
 				每人每日有
-				<input id="drawTimesLimit" maxlength="2" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" style="width:30px;" value="3">
+				<input id="drawTimesLimit" maxlength="2" class="onlyNum" type="text" style="width:30px;" ng-model="settings.gametypeSetting.drawTimesLimit">
 				次抽奖机会
 				<span class="flag"></span>
 				<span id="drawTimesLimitErr" style="color:red;display:none;margin-left: -13px;">最少1次最多10次</span>
@@ -68,7 +68,7 @@
 					<span class="flag"></span>
 					<span class="baseSettingTitle3">每人中奖次数：</span>
 					每人最多可中奖
-					<input id="awardTimesLimit" maxlength="2" class="onlyNum" onkeypress="javascript:return Fai.isNumberKey(event);" type="text" style="width:30px;" value="1">
+					<input id="awardTimesLimit" maxlength="2" class="onlyNum" type="text" style="width:30px;" ng-model="settings.gametypeSetting.awardTimesLimit">
 					次
 					<span class="flag"></span>
 					<span id="awardTimesLimitErr" style="color:red;display:none;margin-left: -13px;">最少1次最多10次</span>
@@ -76,7 +76,7 @@
 
 				<div style="margin-top: 10px;margin-left: 20px;">
 					总中奖率：
-					<input id="winningRate" class="input onlyNum input4" onkeypress="javascript:return Fai.isFloatKey(event);" type="text" value="30.0">
+					<input id="winningRate" class="input onlyNum input4" type="text" value="30.0"  ng-model="settings.gametypeSetting.winningRate" />
 					%
 					<span style="display: block;margin-left: 0px; margin-top:8px;" id="winningRateTip" class="g_tip" _expplayer="10">这意味着每10次抽奖3次获奖</span>
 				</div>

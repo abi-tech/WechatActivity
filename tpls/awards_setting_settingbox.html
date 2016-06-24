@@ -1,0 +1,83 @@
+<div class="awardSettingBox hide">
+	<div class="baseLine awardSettingLine">
+		<span class="flag">*</span>
+		<div class="awardTitle">奖项等级：</div>
+		<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" ng-model="award.awardName" /></div>
+
+	<div class="baseLine3 awardSettingLine">
+		<span class="flag">*</span>
+		<div class="awardTitle">奖品类型：</div>
+		<div class="awardTypeSetBox in-bl">
+			<div class="awardTypeValue divBeInput " value="2">
+				<span class="type">
+					<span class="type">礼品</span>
+				</span>
+				<div class="detailIcon"></div>
+			</div>
+
+			<div class="awardTypeBox hide" style="display: none;">
+				<div class="option checked" checked="" value="2">
+					<span class="type">礼品</span>
+				</div>
+				<div class="option" value="0">
+					<span class="type">门店优惠券</span>
+				</div>
+				<div class="option" value="1">
+					<span class="type">电商优惠券</span>
+				</div>
+
+			</div>
+		</div>
+		<span class="tipsColor marginLeft4">活动发布后类型将无法更改</span>
+	</div>
+
+	<div class="awardDescribeBox baseLine3 awardSettingLine ">
+		<span class="flag">*</span>
+		<div class="awardTitle">奖项名称：</div>
+		<input class="awardDescribe input input7 blurCheck" maxlength="30" type="text" ng-model="award.awardDescribe" />
+		<span class="tipsColor marginLeft4">活动发布后名称将无法更改</span>
+	</div>
+
+	<div class="baseLine3 amounLine awardSettingLine">
+		<span class="flag">*</span>
+		<div class="awardTitle">奖品数量：</div>
+		<input class="awardAmount input onlyNum input7" maxlength="5" type="text" name="" value="0"></div>
+
+	<div class="setCashTypeBox baseLine1 awardSettingLine ">
+		<span class="flag">*</span>
+		<div class="awardTitle">兑奖方式：</div>
+		<input id="cashUnderline{{ award.index }}" class="cashUnderline wxCardInput" type="radio" value="underline" ng-model="award.cashType"/>
+		<label for="cashUnderline{{ award.index }}">线下兑奖</label>
+		<input id="cashOnline{{ award.index }}" class="cashOnline wxCardInput" type="radio" value="online" ng-model="award.cashType" />
+		<label for="cashOnline{{ award.index }}">线上兑奖</label>
+	</div>
+	<div class="setAwardOptInfoBox baseLine3 awardSettingLine">
+		<span class="flag">*</span>
+		<div class="awardTitle">操作提示：</div>
+		<input class="awardOptInfo input input5 blurCheck wxCardInput" maxlength="16" type="text" ng-model="award.awardOptInfo"></div>
+	<div class="setAwardCashSiteBox baseLine3 awardSettingLine clearfix">
+		<div class="floatLeft">
+			<span class="flag" style="vertical-align: top;">*</span>
+			<div class="awardTitle">兑奖地址：</div>
+			<div style="display:inline-block;vertical-align: top;">
+				<div>
+					<input class="awardCashSite input input5 blurCheck wxCardInput " type="text" ng-model="award.awardCashSite" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="setCodeTimeBox baseLine3 awardSettingLine ">
+		<span class="flag">*</span>
+		<div class="usePeriod awardTitle">兑奖期限：</div>
+		<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" ng-model="award.useCodeBeginTime" >
+		至
+		<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" ng-model="award.useCodeEndTime">
+		<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
+	</div>
+	<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
+		<div class="useCodeBeginTimeErr">兑奖日期不能为空</div>
+		<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
+	</div>
+
+</div>

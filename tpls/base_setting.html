@@ -3,109 +3,58 @@
         <div class="">
             <span class="flag">*</span>
             <span class="baseSettingTitle">活动标题：</span>
-            <input id="name" class="activeName input input1" maxlength=30 type="text" name="activeName" value="玩游戏赢大奖" />
+            <input id="name" class="activeName input input1" ng-model="settings.baseSetting.activeName" maxlength=30 type="text" name="activeName" value="" />
         </div>
     </div>
     <div id="setGameTimeBox">
         <div class="baseLine">
             <span class="flag">*</span>
             <span class="baseSettingTitle">开始时间：</span>
-            <input id="beginTime" class="input input1" type="text" name="beginTime" readonly style="cursor:pointer" value="2016-06-21 15:38" />
+            <input id="beginTime" class="input input1" type="text" name="beginTime" readonly style="cursor:pointer" value="2016-06-21 15:38" ng-model="settings.baseSetting.beginTime" />
         </div>
         <div class="baseLine1">
             <span class="flag">*</span>
             <span class="baseSettingTitle">结束时间：</span>
-            <input id="endTime" type="text" class="input input1" name="endTime" readonly style="cursor:pointer" value="2016-06-28 15:38" />
+            <input id="endTime" type="text" class="input input1" name="endTime" readonly style="cursor:pointer" value="2016-06-28 15:38" ng-model="settings.baseSetting.endTime" />
         </div>
     </div>
 
-    <div id="setLimitJoinNumBox" class="hide" style="margin-bottom:10px;">
+    <div id="setLimitJoinNumBox" style="margin-bottom:10px;">
         <div id="joinNumBox" class="baseLine1">
             <span class="flag">&nbsp;</span>
             <span class="baseSettingTitle">参与人数：</span>
-            <input id="hideJoinNum" type="radio" name="isShowJoinNum" />
+            <input id="hideJoinNum" type="radio" name="isShowJoinNum" value="false" ng-model="settings.baseSetting.isShowJoinNum"/>
             <label for="hideJoinNum">隐藏</label>
-            <input id="showJoinNum" type="radio" name="isShowJoinNum" />
+            <input id="showJoinNum" type="radio" name="isShowJoinNum" value="true" ng-model="settings.baseSetting.isShowJoinNum"/>
             <label for="showJoinNum">展示</label>
-            <div class="mg110 otherLine virtualJoinLine" >
+            <div class="mg110 otherLine virtualJoinLine" ng-show="settings.baseSetting.isShowJoinNum == 'true'">
                 <span>
                     在实际参与人数基础上增加
-                    <input type="text" id="virtualJoinNum" class="input inputNum onlyNum input3" value="0" onkeypress="javascript:return Fai.isNumberKey(event);" maxlength="6"/>
+                    <input type="text" id="virtualJoinNum" class="input inputNum onlyNum input3" value="0" maxlength="6" ng-model="settings.baseSetting.virtualJoinNum"/>
                     人
                 </span>
-                <spna class="explain">（只展示不计入统计）</span>
+                <span class="explain">（只展示不计入统计）</span>
             </div>
         </div>
         <div class="baseLine baseLine1 joinNumLimit">
             <span class="powerIcon marginLeft7 ver_biz flag"></span>
-            <!--<span class="flag">&nbsp;</span>
-        -->
-        <span class="baseSettingTitle">参与人数限制：</span>
-        <input id="noLimitNum" type="radio" name="isLimitNum"  disabled />
-        <label for="noLimitNum">不限</label>
-        <input id="LimitNum" type="radio" name="isLimitNum" />
-        <label for="LimitNum" style="margin:0;">限制</label>
-        <span id="limitNumBox">
-            <input type="text" id="theLimitNum" maxlength="6" class="input inputNum onlyNum input3" onkeypress="javascript:return Fai.isNumberKey(event);"/>
-            人参与
-            <br>
-            <span id="limitNumMsg" style="margin-left:115px;">不限参与人数为互动商务版功能，保存后可在活动列表中升级该活动</span>
-        </span>
-    </div>
-
-    <div class="baseLine baseLine1 joinNumLimit hide">
-        <span class="powerIcon marginLeft7 ver_biz flag"></span>
-        <span class="baseSettingTitle">分享人数限制：</span>
-        <input id="noShareLimitNum" type="radio" name="isShareLimitNum"  disabled />
-        <label for="noShareLimitNum">不限</label>
-        <input id="shareLimitNum" type="radio" name="isShareLimitNum" />
-        <label for="shareLimitNum" style="margin:0;">限制</label>
-        <span id="limitShareNumBox">
-            <input type="text" id="theShareLimitNum" maxlength="4" class="input inputNum onlyNum input3" onkeypress="javascript:return Fai.isNumberKey(event);"/>
-            人可分享到朋友圈
-            <br>
-
-            <span id="limitShareNumMsg tipsColor" style="margin-left:115px;">超出最大分享人数限制时，分享朋友圈按钮将不可见</span>
-        </span>
-    </div>
-</div>
-
-<div id="setLimitRegNumBox" class="hide" style="margin-bottom:10px;">
-    <div id="regNumBox" class="baseLine1">
-        <span class="flag">&nbsp;</span>
-        <span class="baseSettingTitle">报名人数：</span>
-        <input id="hideRegNum" type="radio" name="isShowRegNum" />
-        <label for="hideRegNum">隐藏</label>
-        <input id="showRegNum" type="radio" name="isShowRegNum" />
-        <label for="showRegNum">展示</label>
-        <div class="mg110 otherLine virtualRegLine" >
-            <span>
-                在实际参与人数基础上增加
-                <input type="text" id="virtualRegNum" class="input inputNum onlyNum input3" value="0" onkeypress="javascript:return Fai.isNumberKey(event);" maxlength="6"/>
-                人
+            <span class="baseSettingTitle">参与人数限制：</span>
+            <input id="noLimitNum" type="radio" name="isLimitNum" value="false" ng-model="settings.baseSetting.isLimitNum" />
+            <label for="noLimitNum">不限</label>
+            <input id="LimitNum" type="radio" name="isLimitNum" value="true" ng-model="settings.baseSetting.isLimitNum" />
+            <label for="LimitNum" style="margin:0;">限制</label>
+            <span id="limitNumBox" ng-show="settings.baseSetting.isLimitNum == 'true'">
+                <input type="text" id="theLimitNum" maxlength="6" class="input inputNum onlyNum input3" ng-model="settings.baseSetting.theLimitNum"/>
+                人参与
+                <br>
+                <span id="limitNumMsg" style="margin-left:115px;">不限参与人数为互动商务版功能，保存后可在活动列表中升级该活动</span>
             </span>
-            <spna class="explain">（只展示不计入统计）</span>
         </div>
     </div>
-    <div class="baseLine1 regNumLimit">
-        <span class="powerIcon marginLeft7 ver_biz flag"></span>
-        <span class="baseSettingTitle">报名人数限制：</span>
-        <input id="noLimitRegNum" type="radio" name="isLimitRegNum"  disabled/>
-        <label for="noLimitRegNum">不限报名人数</label>
-        <input id="LimitRegNum" type="radio" name="isLimitRegNum" />
-        <label for="LimitRegNum" style="    margin: 0px;">限制</label>
-        <span id="limitRegNumBox" style="    line-height: 30px;">
-            <input type="text" id="theLimitRegNum" maxlength="6" class="input inputNum onlyNum input3" onkeypress="javascript:return Fai.isNumberKey(event);"/>
-            人报名
-            <br>
 
-            <span style="margin-left: 115px;" id="limitRegNumMsg" class="tipsColor">不限报名人数为互动商务版功能，保存后可在活动列表中升级该活动</span>
-        </span>
+    <div class="baseLine2">
+        <span class="flag"></span>
+        <span class="baseSettingTitle" style='vertical-align:top'>活动及兑奖说明：</span>
+        <textarea id="activeExplain" class="input scrollBox" ng-model="settings.baseSetting.activeExplain"></textarea>
     </div>
-</div>
-<div class="baseLine2">
-    <span class="flag"></span>
-    <span class="baseSettingTitle" style='vertical-align:top'>活动及兑奖说明：</span>
-    <textarea id="activeExplain" class="input scrollBox">获奖后凭兑奖码联系活动主办单位即可兑奖。</textarea>
-</div>
 </div>

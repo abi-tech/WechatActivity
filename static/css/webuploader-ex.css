@@ -1,0 +1,22 @@
+.webuploader-container{
+    border: none;
+    background: #f9f9f9;
+    text-align: center;
+    line-height: 20px;
+    padding: 1px;
+    position: relative;
+    display: inline-block;
+}
+.webuploader-pick{
+	width: 70px;
+    height: 20px;
+    border: 1px solid #c8c8c8;
+    background: #f9f9f9;
+    text-align: center;
+    line-height: 20px;
+    padding: 1px;
+    color: black;
+}
+.webuploader-pick-hover{
+	background: #f9f9f9;
+}
