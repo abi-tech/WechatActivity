@@ -1,10 +1,37 @@
-mainModule.directive('topbar', function () {
+var tpl_nav_gamepage = [
+'<div class="topBar" style="min-width: 583px;">',
+    '<div class="title">活动页面</div>',
+    '{{ each list as item i }}',
+    '<div class="column">',
+        '<span class="name">{{ item.name }}</span>',
+        '<span class="flag"></span>',
+    '</div>',
+    '{{ /each }}',
+    '<div class="slideBar">',
+        '<div class="slideBarTip transitionPanel" style="left: 90px;"></div>',
+    '</div>',
+'</div>'
+].join('');
+
+mainModule.directive('navGamepage', ["settingsService", function (settingsService) {
     return {
         restrict : 'A',
-        replace : true,
-        templateUrl : 'tpls/topbar.html'
+        link : function (scope, element, attrs) {
+            var $context = $(template.compile(tpl_nav_gamepage)({ list: settingsService.pages }));
+            element.replaceWith($context);
+            var columns = $(".column", $context);
+            var slideBar = $(".slideBar div", $context);
+            $(".column", $context).on('click', function (e) { 
+                var index = columns.index($(this));
+                columns.removeClass("checked");
+                $(this).addClass("checked");
+                var left = $(this).offset().left - $(this).parent().offset().left + 4;
+                slideBar.css("left", left + "px");
+            });
+            
+        }
     };
-});
+}]);
 
 mainModule.directive('baseSetting', ["settingsService", function (settingsService) {
     return {
@@ -18,28 +45,28 @@ mainModule.directive('baseSetting', ["settingsService", function (settingsServic
                 //alert(newValue);
             //});
 
-            var start = {
-                elem: "#beginTime",
-                format: 'YYYY-MM-DD hh:mm',
-                istime: true,
-                choose: function(datas){
-                     scope.settings.baseSetting.beginTime = datas;
-                     scope.$apply();
-                }
-            };
+            // var start = {
+            //     elem: "#beginTime",
+            //     format: 'YYYY-MM-DD hh:mm',
+            //     istime: true,
+            //     choose: function(datas){
+            //          scope.settings.baseSetting.beginTime = datas;
+            //          scope.$apply();
+            //     }
+            // };
 
-            var end = {
-                elem: "#endTime",
-                format: 'YYYY-MM-DD hh:mm',
-                istime: true,
-                choose: function(datas){
-                     scope.settings.baseSetting.endTime = datas;
-                     scope.$apply();
-                }
-            };
+            // var end = {
+            //     elem: "#endTime",
+            //     format: 'YYYY-MM-DD hh:mm',
+            //     istime: true,
+            //     choose: function(datas){
+            //          scope.settings.baseSetting.endTime = datas;
+            //          scope.$apply();
+            //     }
+            // };
             
-            laydate(start);
-            laydate(end);
+            // laydate(start);
+            // laydate(end);
         }
     };
 }]);
@@ -65,13 +92,16 @@ mainModule.directive('awardsSetting', ["$compile", "settingsService", function (
             var awardDetail = $("#awardDetail", element);
             var comfortSetting = $("#comfortSetting", element);
             var delAwardNum = $("#delAwardNum", element);
-            var addAwardNum = $("#delAwardNum", element);
-            var addAwardNum = $("#copyAward", element);
+            var addAwardNum = $("#addAwardNum", element);
+            var addAwardDetail = $("#addAwardDetail", element);
+            var copyAward = $("#copyAward", element);
             var newAward = $("#newAward", element);
 
             var awardLevelItemDirective = '<div award="award" award-levelitem></div>';
             var awardSettingboxDirective = '<div award="award" award-settingbox></div>';
             var scopes = [];
+            var awardLevelitems = [];
+            var awardSettingboxes = [];
 
             function init() {
                 var awards = scope.settings.awardsSetting.awards;
@@ -83,16 +113,23 @@ mainModule.directive('awardsSetting', ["$compile", "settingsService", function (
                     var awardLevelItem = $compile(awardLevelItemDirective)(newScope);
                     var awardSettingbox = $compile(awardSettingboxDirective)(newScope);
                     awardLevelBox.append(awardLevelItem);
-                    awardSettingbox.addClass("hide");
-                    //alert(awardSettingbox.html());
+                    if (data.active) {
+                        awardLevelItem.removeClass("hide");
+                    }else{
+                        awardLevelItem.addClass("hide");
+                    }
+                    
                     if (index == 0) {
                         awardLevelItem.addClass("checked");
-                        //awardSettingbox.removeClass("hide");
                     }
 
                     awardDetail.append(awardSettingbox);
 
-                    comfortSetting.prop("checked", data.awardType == "comfort"? true : false);
+                    if (data.awardType == "comfort") {
+                        comfortSetting.prop("checked", data.active);
+                    }
+                    awardLevelitems.push(awardLevelItem);
+                    awardSettingboxes.push(awardSettingbox);
                 }); 
                  
                 var items = $(".awardLevelBox .awardLevelItem", element);
@@ -106,14 +143,47 @@ mainModule.directive('awardsSetting', ["$compile", "settingsService", function (
 
                 comfortSetting.on("click", function (e) {
                     var checked = $(this).prop("checked"); 
-                    console.log(scope.settings.awardsSetting);
-                    scope.settings.awardsSetting.removeComfortAward();
-                    if(checked){
-                        //.splice(index, 0, page);
+                    console.log(checked);
+                    scope.settings.awardsSetting.awards[8].active = checked;
+                    scope.$apply();
+                    if (checked) {
+                        awardLevelitems[8].removeClass("hide");
+                        awardSettingboxes[8].removeClass("hide");
                     }else{
-
+                        awardLevelitems[8].addClass("hide");
+                        awardSettingboxes[8].addClass("hide");
+                        awardLevelitems[8].removeClass("checked");
+                    }
+                    if (!validChecked()) { 
+                        awardLevelitems[0].removeClass("hide");
+                        awardLevelitems[0].addClass("checked");
+                        awardSettingboxes[0].removeClass("hide");
                     }
                 })
+
+                delAwardNum.on("click", function (e) {
+
+                });
+
+                addAwardNum.on("click", function (e) {
+                    addAwardDetail.toggle();
+                });
+
+                copyAward.on("click", function (e) {
+                    addAwardDetail.hide();
+                });
+
+                newAward.on("click", function (e) {
+                    addAwardDetail.hide();
+                });
+
+                function validChecked() {
+                    for (var i = 0; i < awardLevelitems.length; i++) {
+                        if(awardLevelitems[i].hasClass("checked"))
+                            return true;
+                    }
+                    return false;
+                }
             }
             init();
         }
@@ -131,19 +201,19 @@ mainModule.directive('moreSetting', ["settingsService", function (settingsServic
             var gameSetBox = $("#gameSetBox", element);
             var shareSetBox = $("#shareSetBox", element);
             var columns = $("#activeTabSubMenu .column", element);
-            var slideBar = $(".slideBar", element);
+            var slideBar = $(".slideBar div", element);
             $("#activeTabSubMenu .column", element).on('click', function (e) {
                 var index = columns.index($(this));
                 columns.removeClass("checked");
                 $(this).addClass("checked");
                 boxes.hide(); 
                 switch(index){
-                    case 0: companySetBox.show(); slideBar.css("left", "0px"); break;
-                    case 1: gameSetBox.show(); slideBar.css("left", "107px"); break;
-                    case 2: shareSetBox.show(); slideBar.css("left", "215px"); break;
+                    case 0: companySetBox.show(); break;
+                    case 1: gameSetBox.show(); break;
+                    case 2: shareSetBox.show(); break;
                 }
-                slideBar.css("transition", "left .5s cubic-bezier(0.175,0.885,0.320,1.325)");
-
+                var left = $(this).offset().left - $(this).parent().offset().left + 15;
+                slideBar.css("left", left + "px");
             });
         }
     };
@@ -155,7 +225,7 @@ var tpl_input_uploader = [
     '<div class="comUploadImg">',
         '<img style="width:100%;height:auto; vertical-align:bottom">',
     '</div>',
-    '<div class="comUploadBox chooseImg">',
+    '<div class="comUploadBox chooseImg" style="margin-top: -30px;">',
         '<span id="picker">选择图片</span>',
         '<div class="comUploadExplain"></div>',
     '</div>',
@@ -172,7 +242,7 @@ mainModule.directive('inputUploader', function () {
             var explain = attrs.explain;
             var comUploadImg = $(".comUploadImg img", element);
             var comUploadExplain = $(".comUploadExplain", element);
-            ngModelController.$render = function () { console.log(attrs);
+            ngModelController.$render = function () { //console.log(attrs);
                 comUploadImg.attr("src", noneimageurl);
                 comUploadExplain.text(explain);
             }
@@ -215,7 +285,7 @@ mainModule.directive('awardLevelitem', function () {
         },
         link : function (scope, element, attrs) {
             //alert(element.html());
-            console.log(scope);
+            //console.log(scope);
         }
     };
 });
@@ -229,28 +299,12 @@ mainModule.directive('awardSettingbox', function () {
             award: '='
         },
         link : function (scope, element, attrs) {
-            // var start = {
-            //     elem: "input.useCodeBeginTime",
-            //     format: 'YYYY-MM-DD',
-            //     istime: true,
-            //     choose: function(datas){
-            //          scope.useCodeBeginTime = datas;
-            //          scope.$apply();
-            //     }
-            // };
-
-            // var end = {
-            //     elem: "input.useCodeEndTime",
-            //     format: 'YYYY-MM-DD',
-            //     istime: true,
-            //     choose: function(datas){
-            //          scope.useCodeEndTime = datas;
-            //          scope.$apply();
-            //     }
-            // };
-            
-            // laydate(start);
-            // laydate(end);
+            var award = scope.award;
+            if (award.active) {
+                element.removeClass("hide");
+            }else{
+                element.addClass("hide");
+            }
         }
     };
 });

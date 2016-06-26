@@ -2,7 +2,8 @@
 	<div class="baseLine awardSettingLine">
 		<span class="flag">*</span>
 		<div class="awardTitle">奖项等级：</div>
-		<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" ng-model="award.awardName" /></div>
+		<input class="awardStyle input input7 blurCheck" maxlength="10" type="text" ng-model="award.awardName" />
+	</div>
 
 	<div class="baseLine3 awardSettingLine">
 		<span class="flag">*</span>
@@ -70,9 +71,9 @@
 	<div class="setCodeTimeBox baseLine3 awardSettingLine ">
 		<span class="flag">*</span>
 		<div class="usePeriod awardTitle">兑奖期限：</div>
-		<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" ng-model="award.useCodeBeginTime" >
+		<input class="useCodeBeginTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" ng-model="award.useCodeBeginTime" format="YYYY-MM-DD" input-timepicker />
 		至
-		<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" ng-model="award.useCodeEndTime">
+		<input class="useCodeEndTime input input7 pointer wxCardInput hasDatepicker" readonly="" type="text" ng-model="award.useCodeEndTime" format="YYYY-MM-DD" input-timepicker />
 		<div class="tipsColor marginLeft112">活动发布后期限只能延长不能缩短</div>
 	</div>
 	<div class="setCodeTimeErrBox baseLine1 awardSettingLine">
@@ -80,4 +81,104 @@
 		<div class="useCodeEndTimeErr">兑奖日期不能为空</div>
 	</div>
 
+	<div class="baseLine3 awardSettingLine setWxCardBox">
+		<span class="powerIcon ver_biz flag"></span>
+		<span class="flag"></span>
+		<div class="awardTitle" style="margin-left: -21px;">微信卡券：</div>
+		<input id="generateWxCard{{ award.index }}" class="generateWxCard" type="radio" name="setWxCard{{ award.index }}" value="generate" ng-model="award.setWxCard"/>
+		<label for="generateWxCard{{ award.index }}">同时生成微信优惠券</label>
+		<input id="closeWxCard{{ award.index }}" class="closeWxCard" checked="" type="radio" name="setWxCard{{ award.index }}" value="close" ng-model="award.setWxCard">
+		<label for="closeWxCard{{ award.index }}">不需要微信优惠券</label>
+
+		<div class="tipsColor" style="margin-left: 113px;">
+			请先到个人中心开通微信卡券功能
+			<a href="http://hd.faisco.com/news/4232" target="blank" class="tipsColor underline">了解更多</a>
+		</div>
+
+	</div>
+
+	<div class="awardDetailSetting ">
+		<div class="baseLine3 awardSettingLine setCusCodeBox">
+			<span class="powerIcon ver_biz flag"></span>
+			<span class="flag"></span>
+			<div class="awardTitle" style="margin-left: -21px;">生成券号：</div>
+			<input id="sysAwardCode{{ award.index }}" class="sysAwardCode" type="radio" name="setCusCode{{ award.index }}" value="system" ng-model="award.setCusCode"/>
+			<label for="sysAwardCode{{ award.index }}">系统生成</label>
+			<input id="cusAwardCode{{ award.index }}" class="cusAwardCode" type="radio" name="setCusCode{{ award.index }}" value="manual" ng-model="award.setCusCode"/>
+			<label for="cusAwardCode{{ award.index }}">手工导入</label>
+
+			<div class="cusCodeInputBox" ng-show="award.setCusCode =='manual'">
+				<textarea class="cusCodeBox awardTextArea marginLeft112" ng-model="award.cusCodeBox"></textarea>
+				<div class="tipsColor marginLeft112  in-bl" style="line-height:12px;">一行一个券号，券号数量与奖品数量需一致</div>
+				<div class="checkCuscodeBtn in-bl pointer">检测格式</div>
+			</div>
+
+			<div class="tipsColor" style="margin-left: 112px;">发布后生成券号方式将无法更改</div>
+		</div>
+
+		<div class="baseLine3 awardSettingLine setAwardLinkBox " style="display: block;">
+			<span class="powerIcon ver_biz flag"></span>
+			<span class="flag"></span>
+			<div class="awardTitle" style="margin-left: -21px;">联系兑奖：</div>
+			<input id="closeAwardLink{{ award.index }}" type="radio" name="cusAwardLink{{ award.index }}" value="close" ng-model="award.cusAwardLink" />
+			<label for="closeAwardLink{{ award.index }}">关闭</label>
+			<input id="openAwardLink{{ award.index }}" type="radio" name="cusAwardLink{{ award.index }}" value="open" ng-model="award.cusAwardLink"/>
+			<label for="openAwardLink{{ award.index }}">开启</label>
+			<div class="tipsColor" style="margin-left: 112px;">开启后，该奖项获奖者需填写联系方式方可查看兑奖码</div>
+		</div>
+		<div class="awardOtherSetting">
+
+			<div class="setAwardSubTitleBox baseLine3 awardSettingLine">
+				<span class="flag"></span>
+				<div class="awardTitle">副标题：</div>
+				<input class="awardSubTile input input5 wxCardInput" maxlength="36" type="text" ng-model="award.awardSubTile" />
+			</div>
+
+			<div class="setServicePhoneBox baseLine3 awardSettingLine">
+				<span class="flag"></span>
+				<div class="awardTitle">客服电话：</div>
+				<input class="servicePhone input input5 wxCardInput" maxlength="15" type="text" ng-model="award.servicePhone" />
+			</div>
+
+		</div>
+
+		<div class="setCashInfoBox baseLine3 awardSettingLine ">
+			<span class="flag"></span>
+			<div class="awardTitle alignTop">
+				<span class="cashTitle">兑奖须知</span>：
+			</div>
+			<textarea class="cashInfoContent input awardTextArea wxCardInput" ng-model="award.cashInfoContent"></textarea>
+		</div>
+
+		<div class="setAwardBtnBox baseLine3 awardSettingLine" style="display: block;">
+			<span class="flag"></span>
+			<div class="awardTitle">自定义按钮：</div>
+			<input id="closeAwardBtn{{ award.index }}" class="closeAwardBtn wxCardInput" type="radio" name="cusAwardBtn{{ award.index }}" value="hide" ng-model="award.cusAwardBtn"/>
+			<label for="closeAwardBtn{{ award.index }}">关闭</label>
+			<input id="openAwardBtn{{ award.index }}" class="openAwardBtn wxCardInput" type="radio" name="cusAwardBtn{{ award.index }}" value="jump" ng-model="award.cusAwardBtn"/>
+			<label for="openAwardBtn{{ award.index }}">页面跳转</label>
+			<input id="newAttention{{ award.index }}" class="newAttention wxCardInput" type="radio" name="cusAwardBtn{{ award.index }}" value="attention" ng-model="award.cusAwardBtn"/>
+			<label for="newAttention{{ award.index }}">一键关注</label>
+			<div class="awardBtnBox" style="padding-left: 98px; " ng-hide="award.cusAwardBtn=='hide'">
+				<div class="setAwardCusBtnBox baseLine3">
+					<span class="flag">*</span>
+					按钮名称：
+					<input class="awartBtnTitle input input6 blurCheck turnPage wxCardInput" ng-show="award.cusAwardBtn=='jump'" maxlength="5" type="text" value="企业官网" ng-model="awart.awartBtnTitle"/>
+					<input class=" input input6 blurCheck oneAttention wxCardInput" ng-show="award.cusAwardBtn=='attention'" maxlength="5" type="text" value="关注我们" ng-model="awart.awartBtnTitle"/></div>
+				<div class="baseLine3" ng-show="award.cusAwardBtn=='jump'">
+					<span class="flag"></span>
+					<span class="AttentionName">按钮链接：</span>
+					<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" ng-model="awart.awardBtnLink" />
+				</div>
+				<div class="baseLine3" ng-show="award.cusAwardBtn=='attention'">
+					<span class="flag"></span>
+					<span class="AttentionName" style="vertical-align: top;">微信公众号：</span>
+					<input class="awardBtnLink input input6 turnLink wxCardInput " maxlength="1000" type="text" value="" ng-model="awart.awardBtnLink" ng-show="award.cusAwardBtn=='jump'"/>
+					<div id="AttentionBox{{ award.index }}" class="AttentionBox" style="width: 240px; display: inline-block;" >
+						<div ng-model="settings.moreSetting.attentionImg" noneImageUrl="/static/images/qrcodeImg.jpg" explain="请上传jpg、png、gif格式的图片" input-uploader></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

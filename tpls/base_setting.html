@@ -10,12 +10,13 @@
         <div class="baseLine">
             <span class="flag">*</span>
             <span class="baseSettingTitle">开始时间：</span>
-            <input id="beginTime" class="input input1" type="text" name="beginTime" readonly style="cursor:pointer" value="2016-06-21 15:38" ng-model="settings.baseSetting.beginTime" />
+            <input id="beginTime" class="input input1" type="text" name="beginTime" readonly style="cursor:pointer" value="2016-06-21 15:38" ng-model="settings.baseSetting.beginTime" format="YYYY-MM-DD hh:mm" input-timepicker />
+
         </div>
         <div class="baseLine1">
             <span class="flag">*</span>
             <span class="baseSettingTitle">结束时间：</span>
-            <input id="endTime" type="text" class="input input1" name="endTime" readonly style="cursor:pointer" value="2016-06-28 15:38" ng-model="settings.baseSetting.endTime" />
+            <input id="endTime" type="text" class="input input1" name="endTime" readonly style="cursor:pointer" value="2016-06-28 15:38" ng-model="settings.baseSetting.endTime" format="YYYY-MM-DD hh:mm" input-timepicker />
         </div>
     </div>
 

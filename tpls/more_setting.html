@@ -86,9 +86,9 @@
             <div class="baseLine1">
                 <span style="margin-right: 4px;" class="powerIcon ver_biz flag"></span>
                 <span class="baseSettingTitle">页脚广告：</span>
-                <input type="radio" id="ShowSkillSup" name="isShowSkillSup" checked="">
+                <input type="radio" id="ShowSkillSup" name="isShowSkillSup" value="true" ng-model="settings.moreSetting.isShowSkillSup">
                 <label for="ShowSkillSup">显示</label>
-                <input type="radio" id="hideSkillSup" name="isShowSkillSup" style="margin-left: 10px;" disabled="disabled">
+                <input type="radio" id="hideSkillSup" name="isShowSkillSup" style="margin-left: 10px;" value="false" ng-model="settings.moreSetting.isShowSkillSup">
                 <label for="hideSkillSup">隐藏</label>
             </div>
             <div class="skillMsg mg110 baseLine tipsColor">隐藏页脚广告为互动商务版功能，保存后可在活动列表中升级该活动</div>
@@ -96,9 +96,9 @@
             <div class="baseLine1">
                 <span style="margin-right: 4px;" class="powerIcon ver_biz flag"></span>
                 <span class="baseSettingTitle">轮播获奖信息：</span>
-                <input type="radio" id="openSlide" name="showSlide" disabled="">
+                <input type="radio" id="openSlide" name="showSlide" value="true" ng-model="settings.moreSetting.showSlide">
                 <label for="openSlide">开启</label>
-                <input type="radio" id="hideSlide" name="showSlide" checked="checked">
+                <input type="radio" id="hideSlide" name="showSlide" value="false" ng-model="settings.moreSetting.showSlide">
                 <label for="hideSlide">关闭</label>
                 <div class="introTips" style="margin-left:115px; margin-top:2px; color:#808080; font-size:12px; line-height:22px">
                     有三名以上玩家获奖后，活动首页将轮播展示玩家中奖信息
@@ -121,81 +121,33 @@
             <div class="baseLine1">
                 <span class="powerIcon marginLeft7 ver_biz flag"></span>
                 <span class="baseSettingTitle" style="width:84px; margin-right:6px;">微信分享内容：</span>
-                <input id="defWxShareText" type="radio" name="wxShareText" checked="checked">
+                <input id="defWxShareText" type="radio" name="wxShareText" value="default" ng-model="settings.moreSetting.wxShareText">
                 <label for="defWxShareText">默认</label>
-                <input id="cusWxShareText" type="radio" name="wxShareText" disabled="">
+                <input id="cusWxShareText" type="radio" name="wxShareText" value="custom" ng-model="settings.moreSetting.wxShareText">
                 <label for="cusWxShareText">自定义</label>
             </div>
-            <div id="wxShareTextWrap" class="hide" style="display: none;">
-
-                <div class="mg110 wxShareTextBox hide">
-                    <div class="wxShareTextTitelBox" style="color: #555;">
-                        <div class="wxShareTextTitel">null</div>
-                        <div class="wxShareTextOther" style="border-left:0;" unselectable="on" onmousedown="return false">
-                            <span class="insertIco" unselectable="on"></span>
-                            插入
-                        </div>
-                        <div class="tagOptionsBox" style="background-color:#fff"></div>
-                    </div>
-                    <div class="wxShareTextContent input" style="background-color:#fff" contenteditable="true">
-                        ​null
-                        <br></div>
-                </div>
-
+            <div id="wxShareTextWrap" ng-show="settings.moreSetting.wxShareText=='custom'">
                 <div class="mg110 wxShareTextBox ">
                     <div class="wxShareTextTitelBox" style="color: #555;">
                         <div class="wxShareTextTitel">分享内容（没有获奖的玩家）</div>
-                        <div class="wxShareTextOther" style="border-left:0;" unselectable="on" onmousedown="return false">
-                            <span class="insertIco" unselectable="on"></span>
-                            插入
-                        </div>
                         <div class="tagOptionsBox" style="background-color:#fff">
-
                             <div class="tagOptions" unselectable="on">玩家名称</div>
-
                         </div>
                     </div>
-                    <div class="wxShareTextContent input" style="background-color:#fff" contenteditable="true">
-                        ​轻轻松松就能抽到大奖，积攒多年的人品终于有用了，你也赶紧来抽奖吧！！
-                        <br></div>
-                </div>
-
-                <div class="mg110 wxShareTextBox hide">
-                    <div class="wxShareTextTitelBox" style="color: #555;">
-                        <div class="wxShareTextTitel">null</div>
-                        <div class="wxShareTextOther" style="border-left:0;" unselectable="on" onmousedown="return false">
-                            <span class="insertIco" unselectable="on"></span>
-                            插入
-                        </div>
-                        <div class="tagOptionsBox" style="background-color:#fff"></div>
-                    </div>
-                    <div class="wxShareTextContent input" style="background-color:#fff" contenteditable="true">
-                        ​null
-                        <br></div>
+                    <textarea class="wxShareTextContent input" style="background-color:#fff" ng-model="settings.moreSetting.wxShareContent.success"></textarea>
                 </div>
 
                 <div class="mg110 wxShareTextBox ">
                     <div class="wxShareTextTitelBox" style="color: #555;">
                         <div class="wxShareTextTitel">分享内容（获奖的玩家）</div>
-                        <div class="wxShareTextOther" style="border-left:0;" unselectable="on" onmousedown="return false">
-                            <span class="insertIco" unselectable="on"></span>
-                            插入
-                        </div>
                         <div class="tagOptionsBox" style="background-color:#fff">
-
                             <div class="tagOptions" unselectable="on">玩家名称</div>
-
                             <div class="tagOptions" unselectable="on">奖项等级</div>
-
                             <div class="tagOptions" unselectable="on">奖品名称</div>
-
                         </div>
                     </div>
-                    <div class="wxShareTextContent input" style="background-color:#fff" contenteditable="true">
-                        ​我已经在活动中抽到了奖品，你也快来抽大奖吧！
-                        <br></div>
+                    <textarea class="wxShareTextContent input" style="background-color:#fff" ng-model="settings.moreSetting.wxShareContent.failure"></textarea>
                 </div>
-
                 <div id="wxShareWarm" class="hide">注：若奖品名称、奖项等级中含有敏感词如”红包“，分享时系统会自动屏蔽敏感词。</div>
             </div>
 

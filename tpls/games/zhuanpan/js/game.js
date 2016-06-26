@@ -72,11 +72,8 @@
     		var $canvas = this.$canvas;
 
     		var angles = idx * (360 / options.columns.length) - (360 / (options.columns.length * 2));
-    		if(angles < 270){
-				angles = 270 - angles; 
-			}else{
-				angles = 360 - angles + 270;
-			}
+    		angles = angles < 270? (270 - angles) : (360 - angles + 270)
+
 			$canvas.rotate({
 		        angle: 0, 
 		        animateTo: angles + 1800, 
@@ -120,13 +117,6 @@
 	            //锁画布(为了保存之前的画布状态)
 	            ctx.save();
 
-	            //改变画布文字颜色
-	            // var b = i + 2;
-	            // if (b % 2) {
-	            //     ctx.fillStyle = "#FFFFFF";
-	            // } else {
-	            //     ctx.fillStyle = "#E5302F";
-	            // };
 	            ctx.fillStyle = options.alternate ? (options.txtColor[i % 2]) : options.columns[i].txtColor;
 	            //----绘制奖品开始----
 	            var text = options.columns[i].text;

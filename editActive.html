@@ -15,36 +15,7 @@
 <body ng-controller="mainController">
 	<div id="editActContainer" class="container editActContainer">
 		<div id="editActive" class="editActBox">
-			<div class="topBar" style="min-width: 583px;">
-				<div class="title">活动页面</div>
-				<div class="column">
-					<span class="name">首页</span>
-					<span class=" flag"></span>
-				</div>
-				<div class="column">
-					<span class="name">活动奖品</span>
-					<span class=" flag"></span>
-				</div>
-				<div class="column">
-					<span class="name">我的奖品</span>
-					<span class=" flag"></span>
-				</div>
-				<div class="column">
-					<span class="name">奖品详情</span>
-					<span class=" flag"></span>
-				</div>
-				<div class="column">
-					<span class="name">中奖页面</span>
-					<span class=" flag"></span>
-				</div>
-				<div class="column checked">
-					<span class="name">没中奖页</span>
-					<span class=" flag"></span>
-				</div>
-				<div class="slideBar">
-					<div id="topBardSlide" class="slideBarTip transitionPanel" style="left: 88px;"></div>
-				</div>
-			</div>
+			<div nav-gamepage></div>
 
 			<div class="editContent">
 				<div class="editDetailBox">
@@ -94,7 +65,7 @@
 
 	<link href="static/plugins/laydate/1.1/need/laydate.css" rel="stylesheet" type="text/css" />
 	<link href="static/plugins/laydate/1.1/skins/danlan/laydate.css" rel="stylesheet" type="text/css" />
-	<script src="static/plugins/laydate/1.1/laydate.js"></script>
+	<script src="static/plugins/laydate/1.1/laydate.dev.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="static/plugins/webuploader/webuploader.css" rel="stylesheet" type="text/css" />
 	<link href="static/css/webuploader-ex.css" rel="stylesheet" type="text/css" />
@@ -103,6 +74,10 @@
 	<script src="static/js/app.js"></script>
 	<script src="static/js/service.js"></script>
 	<script src="static/js/controller.js"></script>
+
+	<script src="static/js/widgets/inputTimepicker.js"></script>
+	<script src="static/js/widgets/uiUploader.js"></script>
+
 	<script src="static/js/directive.js"></script>
 	<script src="static/js/directives/editorDetail.js"></script>
 	<script src="static/js/directives/editorPhone.js"></script>
